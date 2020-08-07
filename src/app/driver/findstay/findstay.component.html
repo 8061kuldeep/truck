@@ -1,0 +1,33 @@
+<app-driverhome></app-driverhome>
+<div class="container w-25 mt-5">
+  <h4 class=" text-info">Search City</h4>
+  <form [formGroup]="search" (ngSubmit)="find()">
+    <input
+      type="text"
+      formControlName="city"
+      class="fadeIn second"
+      placeholder="search city"
+    />
+    <button type="submit" class="=btn btn-warning">search</button>
+  </form>
+</div>
+<table class="table table-stripped w-25 m-auto">
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+  </tr>
+  <tr *ngFor="let i of demo">
+    <td>{{ i.name }}</td>
+    <td>{{ i.city }}</td>
+    <td>
+      <button type="button" class="btn btn-success" (click)="change()">
+        {{ btn }}
+      </button>
+    </td>
+  </tr>
+  <tr class="text-center text-danger">
+    {{
+      text
+    }}
+  </tr>
+</table>

@@ -1,0 +1,12 @@
+.decor {
+  width: 75%;
+  margin: auto;
+  border: solid 1px antiquewhite;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+  padding: 20px;
+}
+input.ng-invalid.ng-touched {
+  border: solid 1px red;
+}

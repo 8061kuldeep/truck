@@ -1,0 +1,67 @@
+<h3 class="text-center text-primary">Signup form</h3>
+<div class="container">
+  <form
+    [formGroup]="Signupform"
+    (ngSubmit)="submit(); save()"
+    class="needs-validation"
+    novalidate
+  >
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter username"
+        formControlName="username"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Enter email"
+        formControlName="email"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="profile">Profile:</label>
+      <select class="form-control " formControlName="profile">
+        <option value="driver">Driver</option>
+        <option value="user">User</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="address"
+        placeholder="Enter username"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        formControlName="pwd"
+        placeholder="Enter password"
+        required
+      />
+    </div>
+
+    <button
+      [disabled]="!Signupform.valid"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
+  </form>
+</div>
